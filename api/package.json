@@ -1,0 +1,9 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Serverless API for Fit Journey App",
+  "main": "index.js",
+  "dependencies": {
+    "mongoose": "^8.5.3"
+  }
+}

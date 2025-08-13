@@ -12,7 +12,7 @@ const GoalDetails = ({ goal }) => {
     });
 
     const handleClick = async () => {
-        const response = await fetch('api/goals/' + goal._id, {
+        const response = await fetch('/api/goals/' + goal._id, {
             method: 'DELETE'
         });
         const json = await response.json();
@@ -27,7 +27,7 @@ const GoalDetails = ({ goal }) => {
     };
 
     const handleSaveClick = async () => {
-        const response = await fetch('api/goals/' + goal._id, {
+        const response = await fetch('/api/goals/' + goal._id, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
