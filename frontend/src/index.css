@@ -1,0 +1,195 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* layout */
+:root {
+    --primary: #16c9ff;
+    --error: #e7195a;
+}
+
+body{
+    /* background: #f1f1f1; */
+    margin: 0;
+    font-family: "Montserrat";
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.861),
+                    rgba(0, 0, 0, 0.831)),
+                    url('./images/bg-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header{
+    background: #000000;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+header a span{
+    color: var(--primary);
+}
+
+.pages {
+    max-width: 1400px;
+    padding:20px;
+    margin: 0 auto;
+}
+
+/* homepage */
+.home {
+    display: grid;
+    grid-template-columns:  3fr 1fr;
+    gap: 100px;
+}
+
+.goal-details {
+    background: #fff;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.goal-details h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.goal-details p{
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.goal-details span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: #ff0000;
+    padding: 6px;
+    border-radius: 50%;
+    color: #ffffff;
+}
+
+/* Goal Form */
+form .form-label{
+    color: white;
+}
+form h3{
+    color: var(--primary);
+}
+form .btn{
+    background-color: white;
+    color: #000000;
+    border: #000000 1px solid;
+}
+form .btn:hover{
+    background-color: var(--primary);
+    color: white;
+}
+label, input{
+    display: block;
+}
+input {
+    padding: 10px; 
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: black;
+    color: var(--primary);
+    border-radius: 4px; 
+    box-sizing: border-box;
+}
+.form-control::placeholder{
+    color: #00717d59;
+}
+form button {
+    background: var (--primary);
+    border: 2 #16c9ff;
+    color: #000000;
+    padding: 10px;
+    font-family: "Montserrat";
+    border-radius: 4px;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: var(--primary);
+}   
+div.error{
+    padding: 10px;
+    background:#ffefef;
+    border: 1px solid var(--error);
+    color: var(--error);
+    border-radius: 4px;
+    margin: 20px 0;
+
+}
+
+input.error{
+    border: 1px solid var(--error);
+}
+.popup{
+    background-color: var(--primary);
+    color: white;
+    font-family: "Quicksand";
+    position: fixed;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(254, 254, 254, 0.685);
+    text-align: center;
+    z-index: 1000;
+    animation: bounce 3s ease-in-out infinite;
+}
+.popup p{
+    font-size: 25px;
+}
+.popup h3{
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.popup h5{
+    font-size: 16px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-50px);
+    }
+    75%{
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
